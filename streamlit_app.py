@@ -1,6 +1,6 @@
 # Import python packages
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
+#from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 #import pandas as pd
 
@@ -10,6 +10,11 @@ st.write("Choose the fruits in your custom smoothie!")
 
 Name_on_order = st.text_input('Name on Smoothie:')
 st.write("The Name of your smoothie is:", Name_on_order)
+
+#new code for SniS
+cnx = st.connection("snowflake")
+session = cnx.session()
+
 
 # Get the Snowflake session
 session = get_active_session()
