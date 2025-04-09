@@ -17,7 +17,7 @@ session = cnx.session()
 
 
 # Get the Snowflake session
-session = get_active_session()
+#session = get_active_session()
 
 
 
